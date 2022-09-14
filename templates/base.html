@@ -5,13 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}TORi | {% endblock title %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
     <style type="text/css">
 
         body {
-            background-color: rgba(0, 23, 33, 0.921);
+            background-color: #001721eb;
             color: rgb(183, 209, 255);
+            font-family: 'Roboto';
+            font-size: 24pt;
         }
 
+        header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-bottom: 1px solid rgb(144, 144, 153);
+            margin-bottom: 25px;
+        }
+
+        header a {
+            text-decoration: none;
+        }
+
+        .logo {
+            margin-right: auto;
+            padding: 0px 25px;
+        }
+
+        .logo h1 {
+            cursor: pointer;
+            color: rgb(229, 229, 143);
+            text-decoration: none;
+            font-size: 100%;
+        }
+
+        /* Nav Bar */
+        .nav-links {
+            list-style: none;
+            padding: 0px 20px;
+        }
+
+        .nav-links li {
+           display: inline-flex;
+           padding: 0px 5px;
+        }
+
+        .nav-links li a {
+            color: aliceblue;
+            font-size: 75%;
+            letter-spacing: 0.3em;
+            padding: 0px 5px;
+        }
+
+
+        /******************** Main Body */
+        main {
+            display: flex;
+            justify-content: center;
+            background-color: #0631448a;
+            border: 1px solid rgba(229, 229, 143, 0.305);
+            border-bottom: 2px dotted rgba(229, 229, 143, 0.305);;
+            border-right: 2px dotted rgba(229, 229, 143, 0.305);;
+            height: 450px;
+        }
+
+        main h1 {
+            background-color: white;
+            padding: 5px;
+            border: 2px rgb(0, 0, 0) solid;
+            border-top: 0px;
+            color: black;
+            font-weight: lighter;
+            text-shadow: 1px 3px 5px rgb(118, 118, 113);
+            box-shadow: inset 5px 10px 10px black;
+        }
+
+        /* Log Out Button */
         main a {
             border: 1px solid rgb(185, 185, 255);
             border-radius: 10px;
@@ -19,23 +90,37 @@
             letter-spacing: 0.1em;
             padding: 5px 10px;
             text-decoration: none;
+            font-size: 16pt;
+            
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .container {
             display: flex;
-            justify-content: left;
+            flex-direction: column;
+            justify-content: center;
         }
-
-        .box {
-            margin: 25px;
-        }
-
-
-        
+    
 
     </style>
 </head>
 <body>
+    <header>
+        <a class="logo" href="{% url 'home' %}"><h1>Sea</h1></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">This</a></li>
+                <li><a href="#">This</a></li>
+                <li><a href="#">This</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         {% block content %}
         {% endblock content %}
