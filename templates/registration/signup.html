@@ -3,9 +3,41 @@
 {% block title %}Sign Up{% endblock title %}
 
 {% block content %}
-<h2>Sign Up</h2>
 <form method="post">{% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign Up</button>
+    <table>
+        <tr>
+            <th colspan="2"><h2>Sign Up</h2></th>
+        </tr>
+        <tr>
+            <td> {{ form.username.label }}: </td>
+            <td> {{ form.username }}</td>
+        </tr>
+        <tr>
+            <td> {{ form.email.label }}: </td>
+            <td> {{ form.email }}</td>
+        </tr>
+        <tr>
+            <td> {{ form.business.label }}: </td>
+            <td> {{ form.business }}</td>
+        </tr>
+        <tr>
+            <td> {{ form.password1.label }}: </td>
+            <td> {{ form.password1 }}</td>
+        </tr>
+        <tr>
+            <td> {{ form.password2.label }}: </td>
+            <td> {{ form.password2 }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit">Sign Up</button></td>
+        </tr>
+    </table>
 </form>
 {% endblock content %}
+
+{% block footer %}
+<p class="footnote">
+    Already registered? <a href="{% url 'login' %}">Log In</a>
+</p>
+{% endblock footer %}
