@@ -46,7 +46,7 @@ div.shape {
 /* Nav Bar */
 .nav-links {
     list-style: none;
-    padding: 0px 20px;
+    padding: 0px 25px;
 }
 
 .nav-links li {
@@ -63,6 +63,7 @@ div.shape {
 
 #profile-link {
     color: #0a8dc6eb;
+    margin-right: 25px;
 }
 
 
