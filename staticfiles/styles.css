@@ -10,7 +10,6 @@ header {
     justify-content: flex-end;
     align-items: center;
     border-bottom: 1px solid rgb(144, 144, 153);
-    padding: 0px 35px;
     margin-bottom: 25px;
 }
 
@@ -59,10 +58,6 @@ div.shape {
     font-size: 75%;
     letter-spacing: 0.3em;
     padding: 0px 5px;
-}
-
-#profile-link {
-    color: #0a8dc6eb;
 }
 
 
@@ -134,17 +129,6 @@ td input {
 }
 
 /* Footer section */
-footer {
-    font-size: 16pt;
-    letter-spacing: 0.1em;
-    margin: 10px 25px;
-}
-
-footer p {
-    color: #0a8dc6eb;
-}
-
 footer a {
-    color: rgb(183, 209, 255);
     text-decoration: none;
 }
